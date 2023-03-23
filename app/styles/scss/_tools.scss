@@ -1,0 +1,9 @@
+// Media query Mixins
+@mixin respond($breakpoint) {
+  @if $breakpoint == medium {
+    @media (max-width: 62.5rem) { @content };
+  }
+  @if $breakpoint == small {
+    @media (max-width: 43.75rem) { @content };
+  }
+}

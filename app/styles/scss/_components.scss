@@ -1,0 +1,138 @@
+// Accessing Variables and Mixins
+@use "colors" as *;
+@use "fonts" as *;
+@use "tools" as *;
+
+// Main Section 
+main {
+    display: flex;
+    background: $main-bg-clr;
+    min-height: 100vh;
+    line-height: 1.6;
+    align-items: center;
+    justify-content: center;
+  }
+
+// Card Container
+  #container {
+    font-family: $main-font-fmly;
+    color: $txt-clr-1;
+    width: 23.3125rem;
+    height: 29.4375rem;
+    background-color: $card-bg-clr;
+    border-radius: 0.625rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+    // Container Media Query
+    @include respond(small) {
+      width: 17.5rem;
+      height: 28.125rem;
+      margin-left: 1.25rem;
+      margin-right: 1.25rem;
+    }
+    // Card Image
+    img {
+      width: 100%;
+      height: 13.0625rem;
+      border-radius: 10px 10px 0 0;
+    }
+    // Card as Link
+    a{
+      text-decoration: none;
+    }
+    // Card Details
+    .details {
+      margin-left: 1.5625rem;
+      margin-right: 1.875rem;
+      margin-top: 1.5625rem;
+      
+      // Card Details Media Query
+      @include respond(small) {
+        margin-top: 1.25rem;
+        margin-left: 1.5625rem;
+        margin-right: 0.9375rem;
+      }
+      // Category Section
+      .category {
+        width: 6.375rem;
+        height: 1.1875rem;
+        background: $button-bg-clr;
+        border-radius: 0.5625rem;
+        
+        h4{
+          font-family: $main-font-fmly;
+          font-size: $btn-fnt-sz;
+          font-weight: $light-fnt;
+          color: $button-txt-clr;
+          text-decoration: none;
+          text-align: center;
+        }
+      }
+      // Card Title
+      .title {
+        font-size: $tt-fnt-sz;
+        font-family: $main-font-fmly;
+        font-weight: $bold-fnt;
+        color: $txt-clr-1;
+        margin-top: 0.625rem;
+        line-height: 1.411875rem;
+
+        // Card Title Media Query
+        @include respond (small) {
+          font-size: $tt-fnt-sz-1;
+        }
+      }
+      }
+      // Card Description
+      .description {
+        font-size: $main-fnt-sz;
+        font-family: $main-font-fmly;
+        font-weight: $regular-fnt;
+        color: $txt-clr-1;
+        margin-top: 0.5625rem;
+
+        // Card Description Media Query
+        @include respond (small) {
+          font-size: $main-fnt-sz-1;
+        }
+      }
+      // Card Profile Section
+      .profile {
+        margin-top: 2.5rem;
+        margin-bottom: 1.875rem;
+        width: 10.0625rem;
+        height: 2.8125rem;
+        display: flex;
+        flex-direction: row;
+
+        // Card Profile Section Media Query
+        @include respond(small) {
+          margin-top: 1.875rem;
+        }
+        img {
+          height: 3rem;
+          width: 3rem;
+          border-radius: 1.5rem;
+        }
+        // Card Profile Data
+        .data {
+          margin-left: 0.4375rem;
+
+          h3{
+            font-size: $main-fnt-sz;
+            font-family: $main-font-fmly;
+            font-weight: $bold-fnt;
+            color: $txt-clr-1;
+          }
+          // Card Time
+          .time {
+            font-size: $sbt-fnt-sz;
+            font-family: inherit;
+            font-weight: $light-fnt;
+            color: $txt-clr-2;
+            margin-top: 0.3125rem;
+          }
+        }
+      }
+    }
+    
